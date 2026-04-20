@@ -1,5 +1,5 @@
 // @ts-check
-import { chromium, defineConfig, devices } from '@playwright/test';
+import { chromium, defineConfig, devices, firefox } from '@playwright/test';
 
 /**
  * Read environment variables from file.
@@ -15,8 +15,8 @@ import { chromium, defineConfig, devices } from '@playwright/test';
 const config = ({
   testDir: './tests',
   // milisecs
-  timeout: 30000,
-  expect:{timeout: 40000,},
+  timeout: 10000,
+  expect:{timeout: 10000,},
   // /* Run tests in files in parallel */
   // fullyParallel: true,
   // /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -31,7 +31,8 @@ const config = ({
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
-browserName: 'chromium'
+browserName: 'firefox',
+headless : false
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     // trace: 'on-first-retry',
   },
