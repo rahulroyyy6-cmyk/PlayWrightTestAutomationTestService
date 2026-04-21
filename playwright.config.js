@@ -15,7 +15,7 @@ import { chromium, defineConfig, devices, firefox } from '@playwright/test';
 const config = ({
   testDir: './tests',
   // milisecs
-  timeout: 10000,
+  timeout: 50000,
   expect:{timeout: 10000,},
   // /* Run tests in files in parallel */
   // fullyParallel: true,

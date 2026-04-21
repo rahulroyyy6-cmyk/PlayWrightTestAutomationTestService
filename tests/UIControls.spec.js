@@ -20,7 +20,7 @@ test('Validate the UI dropdown alert and radio button', async({page})=>
 
     });
 
-test.only('Validate clild window',async({browser})=>{
+test('Validate clild window',async({browser})=>{
         const context=await browser.newContext();
         const page= await context.newPage();
         await page.goto("https://rahulshettyacademy.com/loginpagePractise/");    
