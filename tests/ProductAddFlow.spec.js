@@ -2,7 +2,7 @@ const {test,expect}=require("@playwright/test")
 const email= "rahul.royyy6@gmail.com";
 const password = "TestAutomation@12345"
 
-test.only("Validate Specified Product is Bought",async({page})=>{
+test("Validate Specified Product is Bought",async({page})=>{
 
     // Define the product we want to search and buy
 const productName = "ZARA COAT 3";
